@@ -37,46 +37,57 @@ class SettingsScreen extends StatelessWidget {
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    SetTile(
-                      p: 'icons/arrow_left.svg',
-                      t: 'Share with friends',
-                      onT: () {
+                    InkWell(
+                      onTap: () {
                         Share.share(
                             'Welcome to Ativity TrackerPro. Download app - https://apps.apple.com/us/app/the-activity-trackerpro/id6476199146');
                       },
+                      child: SetTile(
+                        p: 'icons/arrow_left.svg',
+                        t: 'Share with friends',
+                        onT: () {},
+                      ),
                     ),
-                    SetTile(
-                      p: 'icons/man.svg',
-                      t: 'Write support',
-                      onT: () {
+                    InkWell(
+                      onTap: () {
                         Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => Set(
-                              Linxs:
-                                  'https://forms.gle/c54MU8d6QBbvtX4x7'),
+                          builder: (context) =>
+                              Set(Linxs: 'https://forms.gle/c54MU8d6QBbvtX4x7'),
                         ));
                       },
+                      child: SetTile(
+                        p: 'icons/man.svg',
+                        t: 'Write support',
+                        onT: () {},
+                      ),
                     ),
-                    SetTile(
-                      p: 'icons/shield.svg',
-                      t: 'Privacy Policy',
-                      onT: () {
+                    InkWell(
+                      onTap: () {
                         Navigator.of(context).push(MaterialPageRoute(
                           builder: (context) => Set(
                               Linxs:
                                   'https://docs.google.com/document/d/1BkXetoJDyo68rYbTM0xwjGUPsWHvDIOYcYzxw-NoTG4/edit?usp=sharing'),
                         ));
                       },
+                      child: SetTile(
+                        p: 'icons/shield.svg',
+                        t: 'Privacy Policy',
+                        onT: () {},
+                      ),
                     ),
-                    SetTile(
-                      p: 'icons/sheet.svg',
-                      t: 'Terms of use',
-                      onT: () {
+                    InkWell(
+                      onTap: () {
                         Navigator.of(context).push(MaterialPageRoute(
                           builder: (context) => Set(
                               Linxs:
                                   'https://docs.google.com/document/d/1G8j36FL5BuAxYVvE9-Wwl_uvfuzsmiQ6mLt2sCprNy4/edit?usp=sharing'),
                         ));
                       },
+                      child: SetTile(
+                        p: 'icons/sheet.svg',
+                        t: 'Terms of use',
+                        onT: () {},
+                      ),
                     ),
                   ],
                 ),
